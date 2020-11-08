@@ -1,0 +1,16 @@
+😄  minikube v1.14.2 on Ubuntu 18.04
+✨  Automatically selected the docker driver
+👍  Starting control plane node minikube in cluster minikube
+🚜  Pulling base image ...
+💾  Downloading Kubernetes v1.19.2 preload ...
+    > preloaded-images-k8s-v6-v1.19.2-docker-overlay2-amd64.tar.lz4: 486.33 MiB
+🔥  Creating docker container (CPUs=2, Memory=3900MB) ...
+🌐  Found network options:
+    ▪ NO_PROXY=localhost,127.0.0.0/8,::1
+    ▪ no_proxy=localhost,127.0.0.0/8,::1
+🐳  Preparing Kubernetes v1.19.2 on Docker 19.03.8 ...
+    ▪ env NO_PROXY=localhost,127.0.0.0/8,::1
+🔎  Verifying Kubernetes components...
+🌟  Enabled addons: storage-provisioner, default-storageclass
+💡  kubectl not found. If you need it, try: 'minikube kubectl -- get pods -A'
+🏄  Done! kubectl is now configured to use "minikube" by default

@@ -1,0 +1,5 @@
+https://minikube.sigs.k8s.io/docs/start/
+
+kubectl create deployment posts --image=stephengrider/posts:0.0.1
+
+minikube kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.4

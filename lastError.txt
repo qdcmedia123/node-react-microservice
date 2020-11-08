@@ -1,0 +1,37 @@
+mk create secret docker-registry -- --dry-run=client microSecrate \
+--docker-server=https://registry-1.docker.io/v2/ \
+--docker-username=bharatrose1 \
+--docker-password=ThisIsMyLife123 \
+--docker-email=bharatrose1@gmail.com -o yaml > docker-secret.yaml
+
+
+
+  Type     Reason     Age                 From               Message
+  ----     ------     ----                ----               -------
+  Normal   Scheduled  2m5s                default-scheduler  Successfully assigned default/posts-depl-b6476498f-fpnrw to minikube
+  Normal   Pulling    54s (x3 over 2m5s)  kubelet            Pulling image "stephengrider/posts:0.0.7"
+  Warning  Failed     39s (x3 over 110s)  kubelet            Failed to pull image "stephengrider/posts:0.0.7": rpc error: code = Unknown desc = Error response from daemon: Get https://registry-1.docker.io/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+  Warning  Failed     39s (x3 over 110s)  kubelet            Error: ErrImagePull
+  Normal   BackOff    1s (x5 over 110s)   kubelet            Back-off pulling image "stephengrider/posts:0.0.7"
+  Warning  Failed     1s (x5 over 110s)   kubelet            Error: ImagePullBackOff
+
+
+==========================================================================================================
+
+The push refers to a repository [docker.io/drewmullen/tc-common]
+c6d78ef51be8: Preparing
+cf516324493c: Preparing
+denied: requested access to the resource is denied
+https://forums.docker.com/t/denied-requested-access-to-the-resource-is-denied/49693/2
+===========================================================================================================
+
+I had issue 
+#1.docker login
+2.docker tag YOUR_IMAGE_NAME DOCKER_HUB_NAME/YOUR_IMAGE_NAME
+3.docker push DOCKER_HUB_NAME/YOUR_IMAGE_NAME
+
+/*
+docker tag posts:0.0.10 bharatrose1/posts:0.0.10
+docker push bharatrose1/posts:0.0.10
+
+*/
