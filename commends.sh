@@ -4,6 +4,9 @@ minikube start
 
 minikube kubectl version
 
+# delete everythings 
+minikube delete
+
 
 # fuck that macbook commmand udemy did not work while creating resource 
 #  minikube kubectl apply  -f posts.yaml (Teacher was suing in macbook)
@@ -79,3 +82,6 @@ Events:                   <none>
 # minikube ip
 # then use ip with something like this 
 # 192.168.49.2:31449/posts
+
+# While running following things 
+# mk apply -- -f ingress-srv.yaml

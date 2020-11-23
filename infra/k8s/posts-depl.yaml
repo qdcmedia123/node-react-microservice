@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-  name: posts-depl
+  name: posts-depl 
 spec: 
   replicas: 1
   selector: 
@@ -14,4 +14,18 @@ spec:
     spec: 
       containers:
         - name: posts
-          image: "bharatrose1/posts:latest"
+          image: bharatrose1/posts:latest
+          imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: posts-clusterip-srv
+spec:
+  selector:
+    app: posts
+  ports:
+  - name: posts
+    protocol: TCP
+    port: 4000
+    targetPort: 4000
