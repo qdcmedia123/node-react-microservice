@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+const backendURL = 'http://posts.com';
 
 export default () => {
   const [title, setTitle] = useState('');
@@ -7,7 +8,7 @@ export default () => {
   const onSubmit = async event => {
     event.preventDefault();
 
-    await axios.post('http://localhost:4000/posts', {
+    await axios.post(`${backendURL}/posts/create`, {
       title
     });
 
@@ -18,7 +19,7 @@ export default () => {
     <div>
       <form onSubmit={onSubmit}>
         <div className="form-group">
-          <label>Title</label>
+          <label>Post Title</label>
           <input
             value={title}
             onChange={e => setTitle(e.target.value)}

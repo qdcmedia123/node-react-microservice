@@ -51,6 +51,11 @@ minikube ip
 
 #list all the services that is in post services
 mk get services
+mk delete service [service_name]
+
+#get deployments 
+mk get deployments 
+mk delelete deployment [deployment_name]
 
 : '
 kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP          5d19h
@@ -85,3 +90,5 @@ Events:                   <none>
 
 # While running following things 
 # mk apply -- -f ingress-srv.yaml
+
+

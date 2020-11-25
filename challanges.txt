@@ -1,0 +1,1 @@
+1. Sometimes really get error like image unable to create such as ImagePullOff or any other error simply stop the minikube and restart its started to work
