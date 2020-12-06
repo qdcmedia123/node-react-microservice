@@ -1,1 +1,15 @@
 1. Sometimes really get error like image unable to create such as ImagePullOff or any other error simply stop the minikube and restart its started to work
+
+In MacBook there was another issue I spent almost 4 hrs to figure out why its not working, I Mac qinikube you can not use 
+The docker driver while starting qinikube. Therefore following things solve my issue, I was really worried believe me.
+
+minikube config set vm-driver hyperkit
+minikube delete
+minikube start
+minikube addons enable ingress
+
+Here we are configuring vm-dirver to hyper kit not the docker driver 
+
+In this way ingress was able to work properly. Almost three hours really
+
+In linux you don't have to do anything like this
